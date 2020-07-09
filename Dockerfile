@@ -1,13 +1,12 @@
-FROM debian
+FROM python:3.8.3-buster
 RUN apt-get update && apt-get upgrade -y && \
-  apt-get install -y python3 \
+  apt-get install -y \
       git \
       make \
       rename \
       gcc-avr \
       avr-libc \
-      gcc-arm-none-eabi \
-      python3-pip && \
+      gcc-arm-none-eabi && \
   apt-get clean
 RUN pip3 install -U platformio
 
