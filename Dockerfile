@@ -1,13 +1,13 @@
-FROM ubuntu
+FROM debian
 RUN apt-get update && apt-get upgrade -y && \
-  apt-get install -y python \
+  apt-get install -y python3 \
       git \
       make \
       rename \
       gcc-avr \
       avr-libc \
       gcc-arm-none-eabi \
-      python-pip && \
+      python3-pip && \
   apt-get clean
 RUN pip3 install -U platformio
 
