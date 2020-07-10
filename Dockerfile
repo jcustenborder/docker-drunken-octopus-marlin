@@ -1,6 +1,8 @@
 FROM python:3.8.3-buster
 RUN apt-get update && apt-get upgrade -y && \
   apt-get install -y \
+      time \
+      ccache \
       git \
       make \
       rename \
