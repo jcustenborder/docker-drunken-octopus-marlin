@@ -11,6 +11,7 @@ RUN apt-get update && apt-get upgrade -y && \
       gcc-arm-none-eabi && \
   apt-get clean
 RUN pip3 install -U platformio
+RUN pip3 install -U mkdocs
 
 RUN groupadd -g 994 docker
 RUN useradd --uid 1000 -m -G docker jenkins
